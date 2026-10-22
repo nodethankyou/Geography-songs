@@ -6,8 +6,8 @@
 // ▼ 曲を追加・変更する場所。file は music フォルダーからの相対パス。
 const songs = [
   { title: '第1週', artist: 'アーティスト名', file: 'music/song1.mp3' },
-  { title: 'サンプル曲 2', artist: 'アーティスト名', file: 'music/song2.mp3' },
-  { title: 'サンプル曲 3', artist: 'アーティスト名', file: 'music/song3.mp3' }
+  { title: '第2週', artist: 'アーティスト名', file: 'music/song2.mp3' },
+  { title: '第3週', artist: 'アーティスト名', file: 'music/song3.mp3' }
 ];
 const $=id=>document.getElementById(id), audio=$('audio');let index=-1,shuffle=false,repeat=false;
 const format=t=>Number.isFinite(t)?`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`:'0:00';
