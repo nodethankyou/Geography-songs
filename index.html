@@ -14,9 +14,37 @@
   height: 100%;
   object-fit: contain;
   border-radius: 12px;
+}.pdf-area {
+  text-align: center;
+  margin: 22px 0;
+}
+
+.pdf-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #aa97ff;
+  color: #11162a;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.pdf-button:hover {
+  background: #c6b9ff;
+}
+
+.pdf-button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
 }</style></head><body><main><header><small>地理　復習ソング</small><h1>系統地理2026</h1><p>UNO MUSIC</p></header><section class="player" aria-label="音楽プレーヤー"><div class="art" aria-hidden="true">
   <img src="uno.png" alt="" class="cover-image">
-</div><h2 id="title">前期の復習</h2><input type="range" id="seek" min="0" max="100" value="0" aria-label="再生位置"><div class="times"><span id="current">0:00</span><span id="duration">0:00</span></div><div class="controls"><button class="round" id="shuffle" aria-label="シャッフル" aria-pressed="false">⤨</button><button class="round" id="prev" aria-label="前の曲">⏮</button><button class="primary" id="play" aria-label="再生">▶</button><button class="round" id="next" aria-label="次の曲">⏭</button><button class="round" id="repeat" aria-label="リピート" aria-pressed="false">↻</button></div><div class="bottom"><span id="count">0 曲</span><label class="volume">音量 <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8" aria-label="音量"></label></div><p class="status" id="status" role="status"></p><audio id="audio" preload="metadata"></audio></section><section class="library"><h3>TRACK LIST</h3><div id="tracks"></div></section></main><script>
+</div><h2 id="title">前期の復習</h2><input type="range" id="seek" min="0" max="100" value="0" aria-label="再生位置"><div class="times"><span id="current">0:00</span><span id="duration">0:00</span></div><div class="controls"><button class="round" id="shuffle" aria-label="シャッフル" aria-pressed="false">⤨</button><button class="round" id="prev" aria-label="前の曲">⏮</button><button class="primary" id="play" aria-label="再生">▶</button><button class="round" id="next" aria-label="次の曲">⏭</button><button class="round" id="repeat" aria-label="リピート" aria-pressed="false">↻</button></div><div class="bottom"><span id="count">0 曲</span><label class="volume">音量 <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8" aria-label="音量"></label></div><p class="status" id="status" role="status"></p><audio id="audio" preload="metadata"></audio></section><div class="pdf-area">
+  <a href="lyrics.pdf" target="_blank"
+     rel="noopener noreferrer" class="pdf-button">
+    📄 歌詞を見る（PDF）
+  </a>
+</div><section class="library"><h3>TRACK LIST</h3><div id="tracks"></div></section></main><script>
 'use strict';
 // ▼ 曲を追加・変更する場所。file は music フォルダーからの相対パス。
 const songs = [
